@@ -1,0 +1,1296 @@
+/* 
+* Notes:
+* 1. This is the "GENERAL" CSS file for the RESIDENTS side.
+* 2. This file should always be included in every HTML head tag in RESIDENTS.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #FD5B32;
+    --color-light-primary: #FFE1E1;
+    --color-dark-blue: #03045E;
+    --color-bg: #F1F1F1;
+    --color-red: #FF0000;
+    --color-light-red: #FFCCCC;
+    --color-green: #088108;
+    --color-light-green: #99FFCC;
+    --color-charcoal-gray: #36454F;
+    --color-white: #FFFFFF;
+    --color-ash: #F5F5F5;
+    --color-black: #000000;
+    --color-dark-gray: #D9D9D9;
+    --color-navy-blue: #001F3F;
+    --color-secondary: #321E1E;
+
+    --font-size: 0.9rem;
+
+    --transition: all 300ms ease;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+    --form-width: 100%;
+
+    --card-border-radius-1: 0.3rem;
+    --card-border-radius-2: 0.5rem;
+    --card-border-radius-3: 0.8rem;
+    --card-border-radius-4: 2rem;
+    --card-border-radius-5: 5rem;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--color-ash);
+    overflow-x: hidden;
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 1rem auto 4rem auto;
+}
+
+.fornav-container {
+    width: var(--container-width-lg);
+    margin: 0rem auto 2rem auto;
+}
+
+section {
+    margin-top: 3rem;
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: var(--card-border-radius-2);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* ========================== Footer ========================== */
+footer {
+    background: var(--color-primary);
+    padding-top: 4rem;
+    font-size: 0.9rem;
+    color: var(--color-white);
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+    text-decoration: none;
+}
+
+.footer_container > div h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer_logo {
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+}
+
+.footer_1 img {
+    margin-bottom: 0.8rem;
+}
+
+.footer_1 p {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.uil-facebook {
+    font-size: 2rem;
+}
+.footer_1 > div {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+}
+
+footer ul li {
+    margin-bottom: 0.2rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: var(--color-light-primary);
+}
+
+.footer_copyright {
+    text-align: center;
+    margin-top: 6rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-white);
+}
+/* ========================== New Navbar ========================== */
+header {
+    position: sticky;
+    width: 100vw;
+    height: 5rem;
+    background: var(--color-primary);
+    padding: 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    color: var(--color-white);
+    z-index: 11;
+    margin-bottom: 3rem;
+}
+
+header .logo {
+    color: var(--color-white);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header ul {
+    position: relative;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+}
+
+header ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    transition: var(--transition);
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: var(--card-border-radius-4);
+}
+
+header ul li a:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--card-border-radius-4);
+}
+
+header ul li ul li a {
+    padding: 1rem 0;
+}
+
+header ul li ul li a:hover {
+    color: var(--color-primary);
+    padding: 1rem 0.5rem;
+}
+
+header ul li ul {
+    position: absolute;
+    margin-top: 0.1rem;
+    left: 0;
+    width: 14rem;
+    padding: 0.5rem 0;
+    background: var(--color-secondary);
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    border-radius: var(--card-border-radius-3);
+}
+
+header ul li:hover > ul {
+    display: block;
+} 
+
+header ul li ul li {
+    position: relative;
+    width: 100%;
+}
+
+header ul li ul li ul {
+    top: 0;
+    left: 200px;
+}
+
+header ul li ul::-webkit-scrollbar {
+    width: 8px; 
+    border-radius: 12px;
+}
+
+header ul li ul::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary); 
+    border-radius: 12px; 
+}
+
+header ul li ul::-webkit-scrollbar-track {
+    background-color: var(--color-secondary); 
+    border-radius: 12px;
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 1rem 2.5rem;
+    }
+
+    header nav {
+        position: absolute;
+        width: 60%;
+        top: 6rem;
+        right: 2rem;
+        border-radius: var(--card-border-radius-3);
+        padding: 1rem 1.3rem 1rem 0;
+        align-items: center;
+        background: var(--color-primary);
+        display: none;
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    header nav::-webkit-scrollbar {
+        width: 8px; 
+        border-radius: 12px;
+    }
+    
+    header nav::-webkit-scrollbar-thumb {
+        background-color: var(--color-secondary); 
+        border-radius: 12px; 
+    }
+    
+    header nav::-webkit-scrollbar-track {
+        background-color: var(--color-primary); 
+        border-radius: 12px;
+    }
+    
+
+    header nav ul lI a {
+        font-size: 1rem;
+        padding: 1rem;
+        border-radius: var(--card-border-radius-3);
+    }
+
+    header nav ul li a:hover {
+        padding: 1rem;
+        background: var(--color-secondary);
+        border-radius: var(--card-border-radius-3);
+    }
+
+    header.active nav {
+        display: initial;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li ul {
+        margin: 0.5rem 2rem;
+        position: relative; 
+        width: 90%;
+        right: 0;
+        background: var(--color-secondary);
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 1rem;
+    }
+
+    header nav ul li ul:hover {
+        background: var(--color-secondary);
+    }
+
+    header ul li ul li ul {
+        top: 0;
+        left: 0;
+
+    }
+
+    header nav ul li ul:hover ul li {
+        background: var(--color-secondary);
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuToggle::before {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background: var(--color-white);
+        transform: translateY(-12px);
+        box-shadow: 0 12px var(--color-white);
+    }
+
+    .menuToggle::after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background: var(--color-white);
+        transform: translateY(12px);
+    }
+
+    header.active .menuToggle::before {
+        transform: rotate(45deg);
+        box-shadow: 0 0 var(--color-white);
+    }
+
+    header.active .menuToggle::after {
+        transform: rotate(315deg);
+    }
+}
+
+/* ========================== Forms Section ========================== */
+form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: var(--form-width);
+}
+
+input, textarea, select {
+    width: 100%;
+    border: 2px solid var(--color-secondary);
+    padding: 0.8rem 1.4rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius-2);
+    resize: none;
+    color: var(--color-black-font);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Change the font of the placeholders */
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif; /* Change to your desired font */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #888; /* Adjust the color as needed */
+}
+
+/* CUSTOM PHONE NUMBER SPINNER */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form_section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================== Header ========================== */
+.header_section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.header_section-container h3 {
+    color: var(--color-secondary);
+    transition: color 300ms ease-in-out; 
+    cursor: pointer;
+}
+
+.header_section-container:hover h3 {
+    color: var(--color-primary); 
+}
+
+.img_section-container {
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 450px; /* Fixed height */
+    border: 5px solid var(--color-secondary);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.img_section-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.img_section-container:hover {
+    border: 5px solid var(--color-primary);
+}
+
+/* ========================== Button Varieties ========================== */
+/* EDIT CONTAINER (EDIT & DELETE BUTTONS) */
+.edit-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.edit-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+  
+.edit-container svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+  
+.edit-container button:hover svg {
+    transform: scale(1.1);
+}
+
+/* GENERAL UPLOAD BUTTON STYLE */
+.upload_button {
+    /* Button Style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-dark-gray);
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    color: var(--color-black);
+    border: 2px solid transparent;
+    font-weight: 650;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.upload_button:hover {
+    color: var(--color-charcoal-gray);
+    background: var(--color-white);
+    transition: var(--transition);
+}
+
+/* CATEGORY BUTTON STYLE */
+.category_button {
+    background: var(--color-light-primary);
+    color: var(--color-primary);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+}
+
+.category_button:hover {
+    color: var(--color-light-primary);
+}
+
+/* Back Button */
+.back_button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.back_button-container button {
+    background: transparent;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-4);
+    font-weight: 550;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.back_button-container button:hover {
+    opacity: 0.7;
+}
+
+/* ========================== Posts Styles (Articles & Guidelines) ========================== */
+/* GENERAL POSTS STYLE */
+.post_thumbnail {
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 250px; /* Fixed height */
+    border-radius: var(--card-border-radius-3);
+    border: 0.3rem solid var(--color-secondary);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.post_thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post_thumbnail:hover {
+    border: 0.3rem solid var(--color-primary);
+}
+
+.post:hover .post_thumbnail img {
+    filter: saturate(0.6);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.post_author {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.post_author-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.post_author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* POSTS STYLE */
+.posts_container {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    justify-content: center; /* Center-align content for single posts */
+}
+
+.post {
+    max-width: 390px; /* Prevents the post from stretching too wide */
+    margin: auto; /* Centers the post horizontally when there's only one */
+    background: var(--color-white);
+    padding: 1rem 1rem;
+    border-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.post_info a {
+    color: var(--color-secondary);
+    transition: var(--transition);
+}
+
+.post_info a:hover {
+    
+    color: var(--color-primary);
+}
+
+/* SINGLE POST */
+.singlepost {
+    margin: 2rem 0 2rem;
+}
+
+.singlepost_container {
+    width: 70%;
+    background: var(--color-white);
+    padding: 1rem 2rem 2rem;
+    border-radius: var(--card-border-radius-3);  
+    transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.singlepost_container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.singlepost_thumbnail {
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 500px; /* Fixed height */
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.singlepost_thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.singlepost_container p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7rem;
+}
+
+/* ========================== Reusable Styles (Announcements, Publications, Safety Guides, Services Container etc.) ========================== */
+.reusable_services-container {
+    margin-top: 1rem;
+}
+
+.reusable_services-container h4 {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+.reusable_section-container {
+    position: relative;
+    overflow: hidden; /* Prevent horizontal overflow */
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+}
+
+.reusable_section-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.barangay_section-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    scroll-behavior: smooth;
+    box-shadow: inset 0px 2px 8px 2px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: var(--card-border-radius-3);
+    background: var(--color-ash);
+}
+
+.barangay_section-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for better UI */
+}
+
+.reusable-card {
+    flex: 0 0 auto; /* Prevent shrinking and allow scrolling */
+    width: 400px; /* Fixed width for cards */
+    background: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reusable-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.reusable-card img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.reusable_content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.scroll-arrow {
+    position: absolute;
+    top: 50%; /* Centers the arrow vertically */
+    transform: translateY(-50%); /* Adjusts for perfect centering */
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Centers icon vertically */
+    justify-content: center; /* Centers icon horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.scroll-arrow:hover {
+    background: var(--color-primary);
+}
+
+.left-arrow {
+    left: 10px; /* Position on the left */
+    user-select: none; /* Prevent accidental text selection */
+}
+
+.right-arrow {
+    right: 10px; /* Position on the right */
+    user-select: none; /* Prevent accidental text selection */
+}
+
+/* Additional style for the icon */
+.scroll-arrow i {
+    font-size: 1.5rem; /* Adjust icon size */
+    line-height: 1; /* Remove unnecessary spacing */
+}
+
+/* ========================== Inforgraphics for Services ========================== */
+.infographics_container {
+    margin-top: 1.2rem;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: var(--transition);
+}
+
+.infographics_container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.infographics_container h3 {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 1rem 1.2rem;
+    border-radius: var(--card-border-radius-3);
+    margin-bottom: 1rem;
+}
+
+.infographics_body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.infographics_content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-right: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    border-top-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3);
+    border-bottom-right-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.infographics_content:hover {
+    transform: scale(1.03);
+}
+
+/* ========================== Sign Ups Health Alerts ========================== */
+.health_signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.health_signup-container h5 {
+    color: var(--color-white);
+    background: var(--color-secondary);
+    padding: 0.5rem 1rem;
+    border-top-right-radius: var(--card-border-radius-4);
+    border-top-left-radius: var(--card-border-radius-4) ;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.health_form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-white);
+    padding: 1.5rem 2rem;
+    border-top: 5px solid var(--color-secondary);
+    border-bottom-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3) ;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: var(--transition);
+}
+
+.health_form-container h4 {
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+}
+
+.health_form-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/* ========================== Lightbox Styles for Clicked Image Expansion ========================== */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    z-index: 1000;
+    display: flex; /* Use flexbox to center the content */
+    padding: 1rem;
+    overflow-x: hidden;
+}
+
+.lightbox img {
+    width: auto; /* Keep original width */
+    height: auto; /* Keep original height */
+    max-width: 90%; /* Make sure the image doesn’t overflow the screen */
+    max-height: 90%; /* Make sure the image doesn’t overflow vertically */
+    margin: auto;
+    display: block;
+    padding: 1rem; /* Add padding around the image */
+    background-color: var(--color-white); /* Optional: make padding more visible with a background */
+    border-radius: var(--card-border-radius-1); /* Optional: add a rounded border for aesthetics */
+}
+
+/* CLOSE BUTTON */
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--color-white);
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox .close:hover {
+    color: var(--color-dark-gray);
+}
+
+.upload_button-reusable {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 10rem;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-dark-gray);
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--color-black);
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.upload_button-reusable:hover {
+    color: var(--color-charcoal-gray);
+    background: var(--color-white);
+    transition: var(--transition);
+}
+
+/* ========================== Media Queries (Tablets) ========================== */
+@media screen and (max-width: 1024px) {
+        /* ========================== General Styles ========================== */
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    /* ========================== Feedback Modal ========================== */
+
+    #feedback-modal .modal-content {
+        margin: 15% auto;
+        width: 50%;
+    }
+
+    /* ========================== Confirmation Modal ========================== */
+
+    #confirmationModal .modal-content {
+        margin: 20% auto;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* ========================== Header ========================== */
+    .img_section-container {
+        height: 300px;
+    }
+
+    /* ========================== Reusable Section Container ========================== */
+
+    /* ========================== Posts Styles (Articles & Guidelines) ========================== */
+
+    .posts_container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    /* ========================== Barangay Request Container ========================== */
+
+    .barangay_request-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Idea Volunteer Section ========================== */
+
+    .idea_volunteer-container {
+        flex-direction: column;
+    }
+
+    .idea_volunteer {
+        width: 100%;
+    }
+
+    /* ========================== Contact Form Container ========================== */
+
+    .contact_form-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Infographics Container ========================== */
+    .infographics_container h3 {
+        text-align: center;
+    }
+
+    .infographics_body {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Health Alerts ========================== */
+    .health_signup-container h5  {
+        width: 100%;
+    }
+
+    .health_form-container {
+        width: 100%;
+    }
+
+    .emergency_hotline {
+        padding: 1rem;
+    }
+
+    /* ========================== Success Stories ========================== */
+    .success_post {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Sports Event Container ========================== */
+    .sports_event-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Youth & Sports Application ========================== */
+    .youth_sports-application h5 {
+        width: 100%;
+    }
+
+    .youth_sports-container {
+        width: 100%;
+    }
+
+    /* ========================== Core Statements ========================== */
+    .mensahe_section-container {
+        flex-direction: column;
+    }
+
+    /* ========================== Sangguniang Row ========================== */
+    .sangguniang_row {
+        flex-direction: column;
+    }
+
+    /* ========================== Resident's Profile ========================== */
+    .profile_section {
+        padding: 3rem 2rem;
+    }
+
+    /* ========================== Footer ========================== */
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ========================== Media Queries (Mobile) ========================== */
+@media screen and (max-width: 600px) {
+    /* ========================== General Styles ========================== */
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+    }
+
+    /* ========================== Feedback Modal ========================== */
+
+    #feedback-modal .modal-content {
+        margin: 30% auto;
+        width: 80%;
+    }
+
+    #feedback-modal .modal_button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #feedback-modal textarea {
+        margin: 0.5rem 0;
+    }
+
+    #feedback-modal .star-rating {
+        margin: 0.5rem 0;
+    }
+
+    /* ========================== Confirmation Modal ========================== */
+
+    #confirmationModal .modal-content {
+        margin: 20% auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* ========================== Header ========================== */
+    .img_section-container {
+        height: 250px;
+    }
+
+    /* ========================== Reusable Section Container ========================== */
+
+    /* ========================== Posts Styles (Articles & Guidelines) ========================== */
+
+    .posts_container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    /* ========================== Barangay Request Container ========================== */
+    .central_request h3 {
+        font-size: 1rem;
+    }
+
+    .barangay_request-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Idea Volunteer Section ========================== */
+
+    .idea_volunteer-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .idea_volunteer {
+        width: 100%;
+    }
+
+    .idea_volunteer-box {
+        width: 100%;
+    }
+
+    /* ========================== Contact Form Container ========================== */
+
+    .contact_form-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Infographics Container ========================== */
+    .infographics_container h3 {
+        text-align: center;
+    }
+
+    .infographics_body {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Health Alerts ========================== */
+    .health_signup-container h5  {
+        width: 100%;
+    }
+
+    .health_form-container {
+        width: 100%;
+    }
+
+    /* ========================== Emergency Hotline ========================== */
+    .emergency_hotline {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    /* ========================== Success Stories ========================== */
+    .success_post {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Sports Event Container ========================== */
+    .sports_event-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Youth & Sports Application ========================== */
+    .youth_sports-application h5 {
+        width: 100%;
+    }
+
+    .youth_sports-container {
+        width: 100%;
+    }
+
+    /* ========================== Core Statements ========================== */
+    .mensahe_section-container {
+        flex-direction: column;
+    }
+
+    /* ========================== Sangguniang Row ========================== */
+    .sangguniang_row {
+        flex-direction: column;
+    }
+
+    /* ========================== Resident's Profile ========================== */
+    .profile_section {
+        padding: 3rem 2rem;
+    }
+
+    .profile_section-container form {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== Footer ========================== */
+    .footer_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer_1 {
+        display: flex;
+        flex-direction: column  ;
+        align-items: center;
+        justify-content: center;
+    }
+}
